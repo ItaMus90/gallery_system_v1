@@ -7,9 +7,21 @@
                 ADMIN
                 <small>Subheading</small>
             </h1>
+            <?php
+                if ($db->get_connection()){
+
+                    print_r($db->get_connection());
+
+                }else{
+
+                    echo "Error";
+
+                }
+            ?>
             <ol class="breadcrumb">
                 <li>
-                    <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                    <i class="fa fa-dashboard"></i>
+                    <a href="index.html">Dashboard</a>
                 </li>
                 <li class="active">
                     <i class="fa fa-file"></i> Blank Page

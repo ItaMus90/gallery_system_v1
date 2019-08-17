@@ -7,7 +7,14 @@
         protected $connection = null;
 
 
-        public function open_db_connection() {
+        function __construct(){
+
+            $this->open_db_connection();
+
+        }
+
+
+        protected function open_db_connection() {
 
             $this->connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_SCHEMA);
 
@@ -18,12 +25,20 @@
             }
         }
 
+
+        public function get_connection() {
+
+            //Need to ensure the connection is not null
+
+            return $this->connection;
+
+        }
+
     }
 
 
 
     $db = new Database();
-    $db->open_db_connection();
 
 
 
