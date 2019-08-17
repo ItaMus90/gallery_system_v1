@@ -23,6 +23,7 @@
                 die("Error sql: " . mysqli_error());
 
             }
+
         }
 
 
@@ -31,6 +32,23 @@
             //Need to ensure the connection is not null
 
             return $this->connection;
+
+        }
+
+
+        public function query($sql){
+
+            $result = mysqli_query($this->connection, $sql);
+
+            if (!$result){
+
+                //Maybe return false
+                die("Query Failed");
+
+            }
+
+
+            return $result;
 
         }
 
