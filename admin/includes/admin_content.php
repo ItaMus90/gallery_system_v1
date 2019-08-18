@@ -8,15 +8,14 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                if ($db->get_connection()){
 
-                    print_r($db->get_connection());
+                $sql = "SELECT * FROM users WHERE id=1";
 
-                }else{
+                $result = $db->query($sql);
 
-                    echo "Error";
+                $user = mysqli_fetch_array($result);
 
-                }
+                print_r($user);
             ?>
             <ol class="breadcrumb">
                 <li>
