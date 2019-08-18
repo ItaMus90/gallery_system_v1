@@ -23,6 +23,13 @@
                 $result = $user->get_user_by_id(1);
                 print_r($result);
 
+                echo "<br>";
+
+
+                $test_user = User::instantanion($result);
+
+                print_r($test_user);
+
             ?>
             <ol class="breadcrumb">
                 <li>

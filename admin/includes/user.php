@@ -9,7 +9,7 @@
         protected $first_name = null;
         protected $last_name = null;
 
-        private static function instantanion($user){
+        public static function instantanion($user){
 
             $obj = new self;
 
