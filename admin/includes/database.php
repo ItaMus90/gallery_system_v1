@@ -27,6 +27,18 @@
         }
 
 
+        protected function confirm_query($result){
+
+            if (!$result){
+
+                //Maybe return false
+                die("Query Failed");
+
+            }
+
+        }
+
+
         public function get_connection() {
 
             //Need to ensure the connection is not null
@@ -40,17 +52,18 @@
 
             $result = mysqli_query($this->connection, $sql);
 
-            if (!$result){
-
-                //Maybe return false
-                die("Query Failed");
-
-            }
-
-
             return $result;
 
         }
+
+        public function escape_string($str){
+
+           $escaped_str =  mysqli_real_escape_string($this->connection, $str);
+
+           return $escaped_str;
+
+        }
+
 
     }
 
