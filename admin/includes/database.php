@@ -16,11 +16,13 @@
 
         protected function open_db_connection() {
 
-            $this->connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_SCHEMA);
+            //$this->connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_SCHEMA);
 
-            if (mysqli_connect_errno()){
+            $this->connection = new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_SCHEMA);
 
-                die("Error sql: " . mysqli_error());
+            if ($this->connection->connect_errno){
+
+                die("Error sql: " . $this->connection->connect_error);
 
             }
 
@@ -31,8 +33,7 @@
 
             if (!$result){
 
-                //Maybe return false
-                die("Query Failed");
+                die("Query Failed: " . $this->connection->error);
 
             }
 
@@ -50,7 +51,9 @@
 
         public function query($sql){
 
-            $result = mysqli_query($this->connection, $sql);
+            $result = $this->connection->query($sql);
+
+            $this->confirm_query($result);
 
             return $result;
 
@@ -58,9 +61,15 @@
 
         public function escape_string($str){
 
-           $escaped_str =  mysqli_real_escape_string($this->connection, $str);
+           $escaped_str =  $this->connection->real_escape_string($str);
 
            return $escaped_str;
+
+        }
+
+        public function insert_id(){
+
+            return $this->connection->insert_id;
 
         }
 
