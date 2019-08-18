@@ -12,11 +12,17 @@
                 $user = new User();
                 $result = $user->get_users();
 
+
                 while ($row = mysqli_fetch_array($result)){
 
                     print_r($row);
+                    echo "<br>";
 
                 }
+
+                $result = $user->get_user_by_id(1);
+                print_r($result);
+
             ?>
             <ol class="breadcrumb">
                 <li>
