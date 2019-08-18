@@ -9,13 +9,14 @@
             </h1>
             <?php
 
-                $sql = "SELECT * FROM users WHERE id=1";
+                $user = new User();
+                $result = $user->get_users();
 
-                $result = $db->query($sql);
+                while ($row = mysqli_fetch_array($result)){
 
-                $user = mysqli_fetch_array($result);
+                    print_r($row);
 
-                print_r($user);
+                }
             ?>
             <ol class="breadcrumb">
                 <li>
