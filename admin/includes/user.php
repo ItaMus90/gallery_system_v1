@@ -3,36 +3,12 @@
 
     class User {
 
-        protected $id = null;
-        protected $username = null;
-        protected $password = null;
-        protected $first_name = null;
-        protected $last_name = null;
+        public $id = null;
+        public $username = null;
+        public $password = null;
+        public $first_name = null;
+        public $last_name = null;
 
-        public static function instantanion($user){
-
-            $obj = new self;
-
-//            $obj->id = $user["id"];
-//            $obj->username = $user["username"];
-//            $obj->password = $user["password"];
-//            $obj->first_name = $user["first_name"];
-//            $obj->last_name = $user["last_name"];
-
-
-            foreach ($user as $key => $value){
-
-                if ($obj->has_the_key($key)){
-
-                    $obj->key = $value;
-
-                }
-
-            }
-
-            return $obj;
-
-        }
 
         protected function has_the_key($key){
 
@@ -49,11 +25,43 @@
 
             global $db;
             $result = $db->query($sql);
+            $arr_obj = array();
 
-            return $result;
+            while ($row = mysqli_fetch_array($result)){
+
+                $arr_obj[] = self::instantanion($row);
+
+            }
+
+            return $arr_obj;
 
         }
 
+
+        public static function instantanion($user){
+
+            $obj = new self;
+
+//            $obj->id = $user["id"];
+//            $obj->username = $user["username"];
+//            $obj->password = $user["password"];
+//            $obj->first_name = $user["first_name"];
+//            $obj->last_name = $user["last_name"];
+
+
+            foreach ($user as $key => $value){
+
+                if ($obj->has_the_key($key)){
+
+                    $obj->$key = $value;
+
+                }
+
+            }
+
+            return $obj;
+
+        }
 
         public function get_users(){
 
