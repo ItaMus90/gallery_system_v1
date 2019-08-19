@@ -78,9 +78,7 @@
 
             $result = $this->query($sql);
 
-            $user = mysqli_fetch_array($result);
-
-            return $user;
+            return !empty($result) ? array_shift($result) : false;
 
         }
 

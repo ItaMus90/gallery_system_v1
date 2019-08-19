@@ -35,9 +35,13 @@
 
                 foreach ($users as $key){
 
-                    print_r($key->id);
+                    echo $key->id . "<br>";
 
                 }
+
+                echo "user 1 <br>";
+                $x = $user->get_user_by_id(1);
+                echo $x->username;
 
             ?>
             <ol class="breadcrumb">
