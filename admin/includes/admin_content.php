@@ -43,6 +43,7 @@
                 $x = $user->get_user_by_id(1);
                 echo $x->username;
 
+
             ?>
             <ol class="breadcrumb">
                 <li>
