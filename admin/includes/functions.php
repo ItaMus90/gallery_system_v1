@@ -1,13 +1,13 @@
 <?php
 
-    function __autoload($class){
+    function class_autoloader($class){
 
         $class = strtolower($class);
         $path = "includes/" .$class.".php";
 
-        if (file_exists($path)){
+        if (is_file($path) && !class_exists($class)){
 
-            require_once $path;
+            include $path;
 
         }else{
 
@@ -17,3 +17,6 @@
 
 
     }
+
+
+    spl_autoload_register("class_autoloader");
