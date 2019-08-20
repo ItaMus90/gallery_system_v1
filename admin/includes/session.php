@@ -32,6 +32,13 @@
 
         }
 
+        public function logout(){
+
+            unset($_SESSION["user_id"]);
+            unset($this->usre_id);
+            $this->signed_in = false;
+        }
+
 
         private function check_the_login(){
 
