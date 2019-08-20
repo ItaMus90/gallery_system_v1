@@ -14,9 +14,7 @@
         $username = trim($_POST["username"]);
         $password = trim($_POST["password"]);
 
-        //function check if user exist
-
-        $user = null;
+        $user = User::verify_user($username, $password);
 
         if ($user){
 
