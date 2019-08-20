@@ -43,7 +43,7 @@
             $password = $db->escape_string($password);
 
             $sql = "SELECT * FROM users WHERE";
-            $sql .= "username='" .$username. "' AND password='" .$password. "' LIMIT 1";
+            $sql .= " username='" .$username. "' AND password='" .$password. "' LIMIT 1";
 
             $result = (new self)->query($sql);
 
