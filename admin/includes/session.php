@@ -5,12 +5,28 @@
     class Session{
 
         protected $signed_in = false;
+        protected $msg = "";
         public $usre_id = null;
 
         public function __construct(){
 
             session_start();
             $this->check_the_login();
+            $this->check_message();
+
+        }
+
+        public function message($msg = ""){
+
+            if (!empty($msg)){
+
+                $_SESSION["message"] = $msg;
+
+            }else {
+
+                return $this->msg;
+
+            }
 
         }
 
@@ -51,6 +67,22 @@
 
                 unset($this->usre_id);
                 $this->signed_in = false;
+
+            }
+
+        }
+
+
+        private function check_message(){
+
+            if (isset($_SESSION["message"])){
+
+                $this->msg = $_SESSION["message"];
+                unset($_SESSION["message"]);
+
+            }else{
+
+                $this->msg = "";
 
             }
 
