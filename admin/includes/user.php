@@ -51,6 +51,22 @@
 
         }
 
+        public function create() {
+
+            global $db;
+
+            $username = $db->escape_string($this->username);
+            $password = $db->escape_string($this->password);
+            $first_name = $db->escape_string($this->first_name);
+            $last_name = $db->escape_string($this->last_name);
+
+            $sql = "INSERT INTO users(username, password, first_name, last_name)";
+            $sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
+
+
+
+        }
+
         public function get_users(){
 
             $sql = "SELECT * FROM users";
