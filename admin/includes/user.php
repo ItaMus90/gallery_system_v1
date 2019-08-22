@@ -63,7 +63,17 @@
             $sql = "INSERT INTO users(username, password, first_name, last_name)";
             $sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
 
+            if ($db->query($sql)){
 
+                $this->id = $db->last_inserted_id();
+
+                return true;
+
+            }else {
+
+                return false;
+
+            }
 
         }
 

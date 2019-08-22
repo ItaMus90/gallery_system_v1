@@ -10,38 +10,15 @@
             <?php
 
                 $user = new User();
-//                $result = $user->get_users();
-//
-//
-//                while ($row = mysqli_fetch_array($result)){
-//
-//                    print_r($row);
-//                    echo "<br>";
-//
-//                }
-//
-//                $result = $user->get_user_by_id(1);
-//                print_r($result);
-//
-//                echo "<br>";
-//
-//
-//                $test_user = User::instantanion($result);
-//
-//                print_r($test_user);
+
+                $user->username = "Test";
+                $user->password = "aS12345";
+                $user->first_name = "Gos";
+                $user->last_name = "Doft";
+
+                echo $user->create();
 
 
-                $users = $user->get_users();
-
-                foreach ($users as $key){
-
-                    echo $key->id . "<br>";
-
-                }
-
-                echo "user 1 <br>";
-                $x = $user->get_user_by_id(1);
-                echo $x->username;
 
 
             ?>

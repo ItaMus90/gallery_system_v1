@@ -67,9 +67,9 @@
 
         }
 
-        public function insert_id(){
+        public function last_inserted_id(){
 
-            return $this->connection->insert_id;
+            return mysqli_insert_id($this->connection);
 
         }
 
