@@ -9,14 +9,12 @@
             </h1>
             <?php
 
-                $user = new User();
+                $user = User::get_user_by_id(4);
 
-                $user->username = "Test";
-                $user->password = "aS12345";
-                $user->first_name = "Gos";
-                $user->last_name = "Doft";
+                $user->last_name = "Milan Test";
 
-                echo $user->create();
+                $user->update();
+
 
 
 

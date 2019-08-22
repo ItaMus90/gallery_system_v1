@@ -77,6 +77,30 @@
 
         }
 
+        public function update() {
+
+            global $db;
+
+            $username = $db->escape_string($this->username);
+            $password = $db->escape_string($this->password);
+            $first_name = $db->escape_string($this->first_name);
+            $last_name = $db->escape_string($this->last_name);
+            $id = $db->escape_string($this->id);
+
+            $sql = "UPDATE users SET";
+            $sql .= " username='".$username."',";
+            $sql .= " password='".$password."',";
+            $sql .= " first_name='".$first_name."',";
+            $sql .= " last_name='".$last_name."'";
+            $sql .= " WHERE id='".$id."'";
+
+            $db->query($sql);
+
+            return (mysqli_affected_rows($db->get_connection()) === 1) ? true : false;
+
+
+        }
+
         public function get_users(){
 
             $sql = "SELECT * FROM users";
@@ -86,11 +110,11 @@
 
         }
 
-        public function get_user_by_id($id){
+        public static function get_user_by_id($id){
 
             $sql = "SELECT * FROM users WHERE id='". $id ."'LIMIT 1";
 
-            $result = $this->query($sql);
+            $result = (new self)->query($sql);
 
             return !empty($result) ? array_shift($result) : false;
 
