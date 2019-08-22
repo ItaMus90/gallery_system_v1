@@ -51,6 +51,16 @@
 
         }
 
+        public static function get_user_by_id($id){
+
+            $sql = "SELECT * FROM users WHERE id='". $id ."'LIMIT 1";
+
+            $result = (new self)->query($sql);
+
+            return !empty($result) ? array_shift($result) : false;
+
+        }
+
         public function create() {
 
             global $db;
@@ -101,22 +111,27 @@
 
         }
 
+        public function delete() {
+
+            global $db;
+
+            $id = $db->escape_string($this->id);
+
+            $sql = "DELETE FROM users";
+            $sql .= " WHERE id='".$id."' LIMIT 1";
+
+            $db->query($sql);
+
+            return (mysqli_affected_rows($db->get_connection()) === 1) ? true : false;
+
+        }
+
         public function get_users(){
 
             $sql = "SELECT * FROM users";
             $result = $this->query($sql);
 
             return $result;
-
-        }
-
-        public static function get_user_by_id($id){
-
-            $sql = "SELECT * FROM users WHERE id='". $id ."'LIMIT 1";
-
-            $result = (new self)->query($sql);
-
-            return !empty($result) ? array_shift($result) : false;
 
         }
 
