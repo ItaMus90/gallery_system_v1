@@ -14,20 +14,20 @@
 //                $user->delete();
 
 //
-//                  $user = User::get_user_by_id(5);
+                  $user = User::get_user_by_id(5);
+
+                  $user->last_name = "Boni";
+
+                  $user->save();
 //
-//                  $user->username = "Borkez";
+//                $user = new User();
 //
-//                  $user->save();
-
-                $user = new User();
-
-                $user->username = "Abstarct";
-                $user->password = "Qq1234";
-                $user->first_name = "Abs";
-                $user->last_name = "Tract";
-
-                $user->create();
+//                $user->username = "Abstarct";
+//                $user->password = "Qq1234";
+//                $user->first_name = "Abs";
+//                $user->last_name = "Tract";
+//
+//                $user->create();
 
 
             ?>
