@@ -116,18 +116,38 @@
 
             global $db;
 
+            $properties = $this->get_properties();
+            $properties_pairs = array();
+
+            $id = $db->escape_string($this->id);
+
+            foreach ($properties as $key => $value){
+
+                $properties_pairs[] = $key . "=". "'". $value . "'";
+
+            }
+
+
+            /*
             $username = $db->escape_string($this->username);
             $password = $db->escape_string($this->password);
             $first_name = $db->escape_string($this->first_name);
             $last_name = $db->escape_string($this->last_name);
             $id = $db->escape_string($this->id);
+            */
 
+            /*
             $sql = "UPDATE ".self::$db_table." SET";
             $sql .= " username='".$username."',";
             $sql .= " password='".$password."',";
             $sql .= " first_name='".$first_name."',";
             $sql .= " last_name='".$last_name."'";
             $sql .= " WHERE id='".$id."'";
+            */
+
+            $sql = "UPDATE ".self::$db_table." SET ";
+            $sql .= implode(", ", $properties_pairs);
+            $sql .= " WHERE id='" .$id ."'";
 
             $db->query($sql);
 
