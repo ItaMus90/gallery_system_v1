@@ -66,7 +66,7 @@
         public static function get_users(){
 
             $sql = "SELECT * FROM ".self::$db_table;
-            $result = $this->query($sql);
+            $result = (new self)->query($sql);
 
             return $result;
 
@@ -180,7 +180,21 @@
 
         protected function get_properties(){
 
-            return get_object_vars($this);
+            //return get_object_vars($this);
+
+            $properties = array();
+
+            foreach (self::$db_table_fields as $db_field){
+
+                if (property_exists($this,$db_field)){
+
+                    $properties[$db_field] = $this->$db_field;
+
+                }
+
+            }
+
+            return $properties;
 
         }
 
