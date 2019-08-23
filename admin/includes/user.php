@@ -4,6 +4,7 @@
     class User {
 
         protected static $db_table = "users";
+        protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name');
         public $id = null;
         public $username = null;
         public $password = null;
@@ -62,6 +63,15 @@
 
         }
 
+        public static function get_users(){
+
+            $sql = "SELECT * FROM ".self::$db_table;
+            $result = $this->query($sql);
+
+            return $result;
+
+        }
+
         public function save(){
 
             return isset($this->id) ? $this->update() : $this->create();
@@ -72,13 +82,21 @@
 
             global $db;
 
+            $properties = $this->get_properties();
+
+            /*
             $username = $db->escape_string($this->username);
             $password = $db->escape_string($this->password);
             $first_name = $db->escape_string($this->first_name);
             $last_name = $db->escape_string($this->last_name);
+            */
 
-            $sql = "INSERT INTO " .self::$db_table. " (username, password, first_name, last_name)";
-            $sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
+            //$sql = "INSERT INTO " .self::$db_table. " (username, password, first_name, last_name)";
+            //$sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
+
+            $sql = "INSERT INTO " .self::$db_table. " (". implode(',', array_keys($properties)) .")";
+            $sql .= " values('".  implode("','", array_values($properties))  ."')";
+
 
             if ($db->query($sql)){
 
@@ -133,15 +151,6 @@
 
         }
 
-        public function get_users(){
-
-            $sql = "SELECT * FROM ".self::$db_table;
-            $result = $this->query($sql);
-
-            return $result;
-
-        }
-
         protected function has_the_key($key){
 
             $arr_prop = get_object_vars($this);
@@ -166,6 +175,12 @@
             }
 
             return $arr_obj;
+
+        }
+
+        protected function get_properties(){
+
+            return get_object_vars($this);
 
         }
 
