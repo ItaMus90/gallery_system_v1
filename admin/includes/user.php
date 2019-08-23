@@ -82,7 +82,7 @@
 
             global $db;
 
-            $properties = $this->get_properties();
+            $properties = $this->clean_properties();
 
             /*
             $username = $db->escape_string($this->username);
@@ -116,7 +116,7 @@
 
             global $db;
 
-            $properties = $this->get_properties();
+            $properties = $this->clean_properties();
             $properties_pairs = array();
 
             $id = $db->escape_string($this->id);
@@ -215,6 +215,21 @@
             }
 
             return $properties;
+
+        }
+
+        protected function clean_properties(){
+
+            global $db;
+
+            $clean_properties = array();
+
+            foreach ($this->get_properties() as $key => $value){
+
+                $clean_properties[$key] = $db->escape_string($value);
+            }
+
+            return $clean_properties;
 
         }
 
