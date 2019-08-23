@@ -9,14 +9,14 @@
             </h1>
             <?php
 
-//                $user = User::get_user_by_id(3);
+//                $user = User::get_user_by_id(6);
 //
 //                $user->delete();
 
 
                   $user = User::get_user_by_id(5);
 
-                  $user->first_name = "Mitest";
+                  $user->username = "Borkez";
 
                   $user->save();
 

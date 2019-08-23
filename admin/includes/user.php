@@ -3,6 +3,7 @@
 
     class User {
 
+        protected static $db_table = "users";
         public $id = null;
         public $username = null;
         public $password = null;
@@ -42,7 +43,7 @@
             $username = $db->escape_string($username);
             $password = $db->escape_string($password);
 
-            $sql = "SELECT * FROM users WHERE";
+            $sql = "SELECT * FROM ". self::$db_table ." WHERE";
             $sql .= " username='" .$username. "' AND password='" .$password. "' LIMIT 1";
 
             $result = (new self)->query($sql);
@@ -76,7 +77,7 @@
             $first_name = $db->escape_string($this->first_name);
             $last_name = $db->escape_string($this->last_name);
 
-            $sql = "INSERT INTO users(username, password, first_name, last_name)";
+            $sql = "INSERT INTO " .self::$db_table. " (username, password, first_name, last_name)";
             $sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
 
             if ($db->query($sql)){
@@ -103,7 +104,7 @@
             $last_name = $db->escape_string($this->last_name);
             $id = $db->escape_string($this->id);
 
-            $sql = "UPDATE users SET";
+            $sql = "UPDATE ".self::$db_table." SET";
             $sql .= " username='".$username."',";
             $sql .= " password='".$password."',";
             $sql .= " first_name='".$first_name."',";
@@ -123,7 +124,7 @@
 
             $id = $db->escape_string($this->id);
 
-            $sql = "DELETE FROM users";
+            $sql = "DELETE FROM ".self::$db_table;
             $sql .= " WHERE id='".$id."' LIMIT 1";
 
             $db->query($sql);
@@ -134,7 +135,7 @@
 
         public function get_users(){
 
-            $sql = "SELECT * FROM users";
+            $sql = "SELECT * FROM ".self::$db_table;
             $result = $this->query($sql);
 
             return $result;
