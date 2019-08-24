@@ -53,9 +53,9 @@
 
         }
 
-        public static function get_user_by_id($id){
+        public static function get_by_id($id){
 
-            $sql = "SELECT * FROM users WHERE id='". $id ."'LIMIT 1";
+            $sql = "SELECT * FROM ". self::$db_table ." WHERE id='". $id ."'LIMIT 1";
 
             $result = (new self)->query($sql);
 
@@ -63,7 +63,7 @@
 
         }
 
-        public static function get_users(){
+        public static function get_all(){
 
             $sql = "SELECT * FROM ".self::$db_table;
             $result = (new self)->query($sql);
