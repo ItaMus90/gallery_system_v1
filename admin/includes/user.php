@@ -1,7 +1,7 @@
 <?php
 
 
-    class User {
+    class User extends DB_object {
 
         protected static $db_table = "users";
         protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name');
@@ -12,30 +12,7 @@
         public $last_name = null;
 
 
-        public static function instantanion($user){
 
-            $obj = new self;
-
-//            $obj->id = $user["id"];
-//            $obj->username = $user["username"];
-//            $obj->password = $user["password"];
-//            $obj->first_name = $user["first_name"];
-//            $obj->last_name = $user["last_name"];
-
-
-            foreach ($user as $key => $value){
-
-                if ($obj->has_the_key($key)){
-
-                    $obj->$key = $value;
-
-                }
-
-            }
-
-            return $obj;
-
-        }
 
         public static function verify_user($username, $password){
 
@@ -53,24 +30,9 @@
 
         }
 
-        public static function get_by_id($id){
 
-            $sql = "SELECT * FROM ". self::$db_table ." WHERE id='". $id ."'LIMIT 1";
 
-            $result = (new self)->query($sql);
 
-            return !empty($result) ? array_shift($result) : false;
-
-        }
-
-        public static function get_all(){
-
-            $sql = "SELECT * FROM ".self::$db_table;
-            $result = (new self)->query($sql);
-
-            return $result;
-
-        }
 
         public function save(){
 
@@ -182,21 +144,7 @@
 
         }
 
-        protected function query($sql){
 
-            global $db;
-            $result = $db->query($sql);
-            $arr_obj = array();
-
-            while ($row = mysqli_fetch_array($result)){
-
-                $arr_obj[] = self::instantanion($row);
-
-            }
-
-            return $arr_obj;
-
-        }
 
         protected function get_properties(){
 
