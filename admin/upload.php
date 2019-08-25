@@ -2,6 +2,30 @@
 
     <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 
+    <?php
+
+        $msg = null;
+
+        if (isset($_POST["submit"])){
+
+            $photo = new Photo();
+            $photo->title = $_POST["title"];
+            $photo->set_file($_FILES["file_upload"]);
+
+            if ($photo->save()){
+
+                $msg =  "Photo Uploaded Successfully";
+
+            }else{
+
+                $msg = join("<br>", $photo->errors_arr);
+
+            }
+
+        }
+
+    ?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,6 +51,8 @@
                         UPLOAD
                         <small>Subheading</small>
                     </h1>
+
+                    <?php echo $msg; ?>
 
                     <div class="col-md-6">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
