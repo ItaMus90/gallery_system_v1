@@ -14,20 +14,18 @@
 //                $user->delete();
 
 //
-                  $user = User::get_user_by_id(8);
-
-                  $user->password = "Mimimi12";
-
-                  $user->save();
-
-//                $user = new User();
+//                  $users = User::get_all();
 //
-//                $user->username = "Static";
-//                $user->password = "Qq1234";
-//                $user->first_name = "Sta";
-//                $user->last_name = "Tic";
-//
-//                $user->save();
+//                  print_r($users);
+
+                $user = new User();
+
+                $user->username = "StaticDB";
+                $user->password = "Qq1234";
+                $user->first_name = "StaDB";
+                $user->last_name = "TicDB";
+
+                $user->save();
 
 
             ?>
