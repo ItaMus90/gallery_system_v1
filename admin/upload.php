@@ -1,5 +1,7 @@
 <?php include("includes/header.php"); ?>
 
+    <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,14 +27,22 @@
                         UPLOAD
                         <small>Subheading</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li>
-                            <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <i class="fa fa-file"></i> Blank Page
-                        </li>
-                    </ol>
+
+                    <div class="col-md-6">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <input type="text" name="title" class="form-control">
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <input type="file" name="file_upload">
+                            </div><!--form-group-->
+
+                            <input type="submit" name="submit" value="Submit" class="btn btn-success">
+
+                        </form>
+                    </div><!--col-md-6-->
+
                 </div>
             </div>
             <!-- /.row -->
