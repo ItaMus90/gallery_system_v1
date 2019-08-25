@@ -1,5 +1,7 @@
 <?php include("includes/header.php"); ?>
 
+    <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,14 +27,38 @@
                         PHOTOS
                         <small>Subheading</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li>
-                            <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <i class="fa fa-file"></i> Blank Page
-                        </li>
-                    </ol>
+
+                    <div class="col-md-12">
+
+                        <table class="table table-hover">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Photo</th>
+                                    <th>ID</th>
+                                    <th>File Name</th>
+                                    <th>Title</th>
+                                    <th>Size</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div><!--col-md-12-->
+
                 </div>
             </div>
             <!-- /.row -->
