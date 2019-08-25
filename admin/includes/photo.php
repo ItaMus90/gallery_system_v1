@@ -18,8 +18,8 @@ class Photo extends DB_object{
     public $size = null;
     public $tmp_path = null;
     public $upload_dir = "images";
-    public $custom_errors_arr = array();
-    public $upload_arr = array(
+    public $errors_arr = array();
+    public $upload_errors_arr = array(
 
         UPLOAD_ERR_OK         => "There is no error.",
         UPLOAD_ERR_INI_SIZE   => "The uploaded file exceeds the upload_max_filesize directive in php.ini",
@@ -31,6 +31,34 @@ class Photo extends DB_object{
         UPLOAD_ERR_EXTENSION  => "A PHP extension stopped the file upload."
 
     );
+
+
+    //This is passing $_FILE['uploaded_file'] as an argument
+
+    public function set_file($file){
+
+        if (empty($file) || !$file || !is_array($file)){
+
+            $this->errors_arr[] = "There was no file uploaded here";
+
+            return false;
+
+        }
+
+        if ($file["error"] !== 0){
+
+            $this->errors_arr[] = $this->upload_errors_arr[$file["error"]];
+
+            return false;
+
+        }
+
+        $this->filename = basename($file["name"]);
+        $this->type     = $file["type"];
+        $this->tmp_path = $file["tmp_name"];
+        $this->size     = $file["size"];
+
+    }
 
 
 
