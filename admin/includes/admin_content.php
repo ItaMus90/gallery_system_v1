@@ -18,14 +18,30 @@
 //
 //                  print_r($users);
 
-                $user = new User();
+//                $user = new User();
+//
+//                $user->username = "StaticDB123";
+//                $user->password = "Qq1234";
+//                $user->first_name = "StaDB";
+//                $user->last_name = "TicDB";
+//
+//                $user->save();
 
-                $user->username = "StaticDB";
-                $user->password = "Qq1234";
-                $user->first_name = "StaDB";
-                $user->last_name = "TicDB";
 
-                $user->save();
+                $photo = new Photo();
+
+                $photo->title = "Photo 2 test";
+                $photo->description = "test test";
+                $photo->filename = "image.png";
+                $photo->type = "image.png";
+                $photo->size = '13';
+
+                $photo->save();
+
+                 $photos = Photo::get_all();
+
+                 print_r($photos);
+
 
 
             ?>
