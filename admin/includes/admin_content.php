@@ -26,23 +26,24 @@
 //                $user->last_name = "TicDB";
 //
 //                $user->save();
+//
+//
+//                $photo = new Photo();
+//
+//                $photo->title = "Photo 2 test";
+//                $photo->description = "test test";
+//                $photo->filename = "image.png";
+//                $photo->type = "image.png";
+//                $photo->size = '13';
+//
+//                $photo->save();
+//
+//                 $photos = Photo::get_all();
+//
+//                 print_r($photos);
 
 
-                $photo = new Photo();
-
-                $photo->title = "Photo 2 test";
-                $photo->description = "test test";
-                $photo->filename = "image.png";
-                $photo->type = "image.png";
-                $photo->size = '13';
-
-                $photo->save();
-
-                 $photos = Photo::get_all();
-
-                 print_r($photos);
-
-
+                echo INCLUDES_PATH;
 
             ?>
             <ol class="breadcrumb">
