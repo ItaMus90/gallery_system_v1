@@ -29,7 +29,7 @@
       <file leaf-file-name="db_object.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="50">
               <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
               <folding>
                 <element signature="n#query#0;n#DB_object#0;n#!!top" />
@@ -77,8 +77,8 @@
       <file leaf-file-name="photo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+            <state relative-caret-position="630">
+              <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
               <folding>
                 <element signature="e#484#812#0#PHP" />
               </folding>
@@ -92,8 +92,8 @@
     <findStrings>
       <find>escape_string</find>
       <find>insert_id</find>
-      <find>self</find>
       <find>users</find>
+      <find>self</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,12 +209,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565953189904</updated>
-      <workItem from="1565953190996" duration="51253000" />
+      <workItem from="1565953190996" duration="53068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51253000" />
+    <option name="totallyTimeSpent" value="53068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
@@ -384,25 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
-          <folding>
-            <element signature="n#query#0;n#DB_object#0;n#!!top" />
-            <element signature="n#instantanion#0;n#DB_object#0;n#!!top" />
-            <element signature="n#get_all#0;n#DB_object#0;n#!!top" />
-            <element signature="n#get_by_id#0;n#DB_object#0;n#!!top" />
-            <element signature="n#clean_properties#0;n#DB_object#0;n#!!top" />
-            <element signature="n#has_the_key#0;n#DB_object#0;n#!!top" />
-            <element signature="n#get_properties#0;n#DB_object#0;n#!!top" />
-            <element signature="n#save#0;n#DB_object#0;n#!!top" />
-            <element signature="n#update#0;n#DB_object#0;n#!!top" />
-            <element signature="n#delete#0;n#DB_object#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -427,10 +408,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
+          <folding>
+            <element signature="n#query#0;n#DB_object#0;n#!!top" />
+            <element signature="n#instantanion#0;n#DB_object#0;n#!!top" />
+            <element signature="n#get_all#0;n#DB_object#0;n#!!top" />
+            <element signature="n#get_by_id#0;n#DB_object#0;n#!!top" />
+            <element signature="n#clean_properties#0;n#DB_object#0;n#!!top" />
+            <element signature="n#has_the_key#0;n#DB_object#0;n#!!top" />
+            <element signature="n#get_properties#0;n#DB_object#0;n#!!top" />
+            <element signature="n#save#0;n#DB_object#0;n#!!top" />
+            <element signature="n#update#0;n#DB_object#0;n#!!top" />
+            <element signature="n#delete#0;n#DB_object#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+        <state relative-caret-position="630">
+          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
           <folding>
             <element signature="e#484#812#0#PHP" />
           </folding>
