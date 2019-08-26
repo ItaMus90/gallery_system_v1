@@ -60,6 +60,11 @@ class Photo extends DB_object{
 
     }
 
+    public function get_images_path() {
+
+        return $this->upload_dir . DS . $this->filename;
+
+    }
 
     public function save(){
 

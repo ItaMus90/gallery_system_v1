@@ -53,7 +53,7 @@
                             <?php foreach ($photos as $photo) : ?>
                                 <tr>
                                     <td>
-                                        <img src="https://via.placeholder.com/62" alt="">
+                                        <img src="<?php echo $photo->get_images_path(); ?>" width="62" height="62" alt="">
                                     </td>
                                     <td>
                                         <?php echo $photo->id; ?>
