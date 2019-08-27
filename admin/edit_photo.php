@@ -4,11 +4,31 @@
 
 <?php
 
-    if (isset($_POST["update"])){
+    if (empty($_GET["id"]) || !isset($_GET["id"])){
 
-        echo "its work";
+        redirect("photos.php");
+
+    }else {
+
+        $photo = Photo::get_by_id($_GET["id"]);
+
+        if (isset($_POST["update"])){
+
+
+            if (key($photo)){
+
+                $_POST["title"];
+                $_POST["caption"];
+                $_POST["alternate_text"];
+                $_POST["description"];
+
+            }
+
+        }
 
     }
+
+
 
 ?>
 
