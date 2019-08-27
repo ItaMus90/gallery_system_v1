@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e07677ad-3c15-4dd1-b3fb-cb8b7739bfb7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/photos.php" afterDir="false" />
-    </list>
+    <list default="true" id="e07677ad-3c15-4dd1-b3fb-cb8b7739bfb7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +20,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="photo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="187">
+              <caret line="9" column="125" selection-start-line="9" selection-start-column="125" selection-end-line="9" selection-end-column="125" />
               <folding>
                 <element signature="n#set_file#0;n#Photo#0;n#!!top" />
                 <element signature="n#images_path#0;n#Photo#0;n#!!top" />
@@ -48,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_photo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit_photo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="72" column="99" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="99" />
+            <state relative-caret-position="176">
+              <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -139,8 +134,8 @@
         <option value="$PROJECT_DIR$/admin/includes/admin_content.php" />
         <option value="$PROJECT_DIR$/admin/delete_photo.php" />
         <option value="$PROJECT_DIR$/admin/photos.php" />
-        <option value="$PROJECT_DIR$/admin/edit_photo.php" />
         <option value="$PROJECT_DIR$/admin/includes/photo.php" />
+        <option value="$PROJECT_DIR$/admin/edit_photo.php" />
       </list>
     </option>
   </component>
@@ -232,16 +227,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565953189904</updated>
-      <workItem from="1565953190996" duration="66094000" />
+      <workItem from="1565953190996" duration="66357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66094000" />
+    <option name="totallyTimeSpent" value="66357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24985868" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -252,7 +246,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -460,22 +454,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="72" column="99" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        <state relative-caret-position="187">
+          <caret line="9" column="125" selection-start-line="9" selection-start-column="125" selection-end-line="9" selection-end-column="125" />
           <folding>
             <element signature="n#set_file#0;n#Photo#0;n#!!top" />
             <element signature="n#images_path#0;n#Photo#0;n#!!top" />
             <element signature="n#save#0;n#Photo#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
         </state>
       </provider>
     </entry>
