@@ -9,8 +9,9 @@
             </h1>
             <?php
 
-//                $user = User::get_user_by_id(6);
-//
+                $user = User::get_by_id(1);
+                print_r($user)
+                //
 //                $user->delete();
 
 //
@@ -43,7 +44,7 @@
 //                 print_r($photos);
 
 
-                echo INCLUDES_PATH;
+                //echo INCLUDES_PATH;
 
             ?>
             <ol class="breadcrumb">

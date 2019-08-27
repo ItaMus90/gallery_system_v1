@@ -4,10 +4,6 @@
 
 class DB_object {
 
-    //static properties
-    protected static $db_table = "users";
-    protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name');
-
     //static methods
     protected static function query($sql){
 
@@ -30,12 +26,6 @@ class DB_object {
         $calling_class = get_called_class();
 
         $obj = new $calling_class;
-
-//            $obj->id = $user["id"];
-//            $obj->username = $user["username"];
-//            $obj->password = $user["password"];
-//            $obj->first_name = $user["first_name"];
-//            $obj->last_name = $user["last_name"];
 
 
         foreach ($class_ob as $key => $value){
@@ -130,16 +120,6 @@ class DB_object {
 
         $properties = $this->clean_properties();
 
-        /*
-        $username = $db->escape_string($this->username);
-        $password = $db->escape_string($this->password);
-        $first_name = $db->escape_string($this->first_name);
-        $last_name = $db->escape_string($this->last_name);
-        */
-
-        //$sql = "INSERT INTO " .static::$db_table. " (username, password, first_name, last_name)";
-        //$sql .= " values('".$username."', '".$password."', '".$first_name."', '".$last_name."')";
-
         $sql = "INSERT INTO " .static::$db_table. " (". implode(',', array_keys($properties)) .")";
         $sql .= " values('".  implode("','", array_values($properties))  ."')";
 
@@ -172,24 +152,6 @@ class DB_object {
             $properties_pairs[] = $key . "=". "'". $value . "'";
 
         }
-
-
-        /*
-        $username = $db->escape_string($this->username);
-        $password = $db->escape_string($this->password);
-        $first_name = $db->escape_string($this->first_name);
-        $last_name = $db->escape_string($this->last_name);
-        $id = $db->escape_string($this->id);
-        */
-
-        /*
-        $sql = "UPDATE ".static::$db_table." SET";
-        $sql .= " username='".$username."',";
-        $sql .= " password='".$password."',";
-        $sql .= " first_name='".$first_name."',";
-        $sql .= " last_name='".$last_name."'";
-        $sql .= " WHERE id='".$id."'";
-        */
 
         $sql = "UPDATE ".static::$db_table." SET ";
         $sql .= implode(", ", $properties_pairs);
