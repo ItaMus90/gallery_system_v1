@@ -68,6 +68,14 @@
                                 <input type="text" name="title" value="<?php echo $photo->title; ?>" class="form-control">
 
                             </div>
+                            
+                            <div class="form-group">
+
+                                <a href="" class="thumbnail">
+                                    <img src="<?php echo $photo->get_images_path(); ?>" width="200" height="240">
+                                </a>
+                                
+                            </div>
 
                             <div class="form-group">
 
