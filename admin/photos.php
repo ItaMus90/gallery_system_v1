@@ -53,7 +53,7 @@
                             <?php foreach ($photos as $photo) : ?>
                                 <tr>
                                     <td>
-                                        <img src="<?php echo $photo->get_images_path(); ?>" width="62" height="62" alt="">
+                                        <img class="admin-photo-thumbnail" src="<?php echo $photo->get_images_path(); ?>" alt="">
 
                                         <div class="pictures_link">
 
