@@ -17,10 +17,10 @@
 
             if (key($photo)){
 
-                $_POST["title"];
-                $_POST["caption"];
-                $_POST["alternate_text"];
-                $_POST["description"];
+                $photo->title          = $_POST["title"];
+                $photo->caption        = $_POST["caption"];
+                $photo->alternate_text = $_POST["alternate_text"];
+                $photo->description    = $_POST["description"];
 
             }
 
@@ -63,28 +63,28 @@
 
                             <div class="form-group">
 
-                                <input type="text" name="title" class="form-control">
+                                <input type="text" name="title" value="<?php echo $photo->title; ?>" class="form-control">
 
                             </div>
 
                             <div class="form-group">
 
                                 <label for="caption">Caption</label>
-                                <input type="text" name="caption" class="form-control">
+                                <input type="text" name="caption" value="<?php echo $photo->caption; ?>" class="form-control">
 
                             </div>
 
                             <div class="form-group">
 
                                 <label for="alternate_text">Alternate Text</label>
-                                <input type="text" name="alternate_text" class="form-control">
+                                <input type="text" name="alternate_text" value="<?php echo $photo->alternate_text; ?>" class="form-control">
 
                             </div>
 
                             <div class="form-group">
 
                                 <label for="description">Description</label>
-                                <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
+                                <textarea name="description" cols="30" rows="10" class="form-control"><?php echo $photo->description; ?></textarea>
                             </div>
 
                         </div><!--col-md-8-->
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="info-box-footer clearfix">
                                     <div class="info-box-delete pull-left">
-                                        <a  href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-danger btn-lg ">Delete</a>
+                                        <a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-danger btn-lg ">Delete</a>
                                     </div>
                                     <div class="info-box-update pull-right ">
                                         <input type="submit" name="update" value="Update" class="btn btn-primary btn-lg ">
