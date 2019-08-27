@@ -17,6 +17,7 @@
     if (key($photo)){
 
         $photo->delete_photo();
+        redirect("photos.php");
 
     }else{
 

@@ -34,7 +34,6 @@ class Photo extends DB_object{
 
 
     //This is passing $_FILE['uploaded_file'] as an argument
-
     public function set_file($file){
 
         if (empty($file) || !$file || !is_array($file)){
@@ -124,6 +123,22 @@ class Photo extends DB_object{
         }
 
 
+
+    }
+
+    public function delete_photo(){
+
+        if ($this->delete()){
+
+            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->get_images_path();
+
+            return unlink($target_path) ? true : false;
+
+        }else {
+
+            return  false;
+
+        }
 
     }
 
