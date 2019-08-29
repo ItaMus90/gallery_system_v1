@@ -1,4 +1,14 @@
 
+
+.admin-user-thumbnail{
+
+    width: 70px;
+    border-radius: 5px;
+
+}
+
+
+/*********Photo page***********/
 .admin-photo-thumbnail{
 
     width: 200px;

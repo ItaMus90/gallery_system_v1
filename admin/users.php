@@ -56,7 +56,7 @@ $users = User::get_all();
                                         <?php echo $user->id; ?>
                                     </td>
                                     <td>
-                                        <img class="admin-user-thumbnail" src="<?php echo $user->image; ?>" alt="">
+                                        <img class="admin-user-thumbnail" src="<?php echo $user->get_image_path(); ?>" alt="">
                                     </td>
                                     <td>
                                         <?php echo $user->username; ?>
