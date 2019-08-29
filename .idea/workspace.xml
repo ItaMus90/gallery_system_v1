@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e07677ad-3c15-4dd1-b3fb-cb8b7739bfb7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/add_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/edit_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/db_object.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/db_object.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/photo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,20 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="photos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/photos.php">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="44" column="19" lean-forward="true" selection-end-line="95" selection-end-column="40" />
+            <state relative-caret-position="1650">
+              <caret line="66" column="104" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <file leaf-file-name="edit_photo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state relative-caret-position="150">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -36,40 +40,63 @@
         <entry file="file://$PROJECT_DIR$/admin/add_user.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <caret line="20" column="41" selection-end-line="114" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/delete_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="98" column="38" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="38" />
+            <state relative-caret-position="275">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
+                <element signature="n#verify_user#0;n#User#0;n#!!top" />
                 <element signature="n#get_image_path#0;n#User#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db_object.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding>
+                <element signature="n#query#0;n#DB_object#0;n#!!top" />
+                <element signature="n#instantanion#0;n#DB_object#0;n#!!top" />
+                <element signature="n#get_all#0;n#DB_object#0;n#!!top" />
+                <element signature="n#clean_properties#0;n#DB_object#0;n#!!top" />
+                <element signature="n#has_the_key#0;n#DB_object#0;n#!!top" />
+                <element signature="n#get_properties#0;n#DB_object#0;n#!!top" />
+                <element signature="n#save#0;n#DB_object#0;n#!!top" />
+                <element signature="n#create#0;n#DB_object#0;n#!!top" />
+                <element signature="n#update#0;n#DB_object#0;n#!!top" />
+                <element signature="n#delete#0;n#DB_object#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/edit_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="106" column="131" selection-start-line="106" selection-start-column="93" selection-end-line="106" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="128" selection-end-column="5" />
+            <state relative-caret-position="286">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="n#set_file#0;n#Photo#0;n#!!top" />
                 <element signature="n#save#0;n#Photo#0;n#!!top" />
+                <element signature="n#delete_photo#0;n#Photo#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -85,8 +112,8 @@
       <find>self</find>
       <find>user</find>
       <find>There was no file uploaded here</find>
-      <find>photo</find>
       <find>filename</find>
+      <find>photo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,10 +137,8 @@
         <option value="$PROJECT_DIR$/admin/includes/database.php" />
         <option value="$PROJECT_DIR$/admin/includes/init.php" />
         <option value="$PROJECT_DIR$/admin/upload.php" />
-        <option value="$PROJECT_DIR$/admin/includes/db_object.php" />
         <option value="$PROJECT_DIR$/admin/includes/admin_content.php" />
         <option value="$PROJECT_DIR$/admin/delete_photo.php" />
-        <option value="$PROJECT_DIR$/admin/includes/photo.php" />
         <option value="$PROJECT_DIR$/admin/edit_photo.php" />
         <option value="$PROJECT_DIR$/admin/css/style.css" />
         <option value="$PROJECT_DIR$/admin/includes/footer.php" />
@@ -123,9 +148,12 @@
         <option value="$PROJECT_DIR$/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/admin/css/custom_style.css" />
         <option value="$PROJECT_DIR$/admin/delete_user.php" />
+        <option value="$PROJECT_DIR$/admin/add_user.php" />
         <option value="$PROJECT_DIR$/admin/users.php" />
         <option value="$PROJECT_DIR$/admin/includes/user.php" />
-        <option value="$PROJECT_DIR$/admin/add_user.php" />
+        <option value="$PROJECT_DIR$/admin/includes/db_object.php" />
+        <option value="$PROJECT_DIR$/admin/includes/photo.php" />
+        <option value="$PROJECT_DIR$/admin/edit_user.php" />
       </list>
     </option>
   </component>
@@ -164,6 +192,18 @@
               <item name="gallery_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="gallery_system" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gallery_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gallery_system" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gallery_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gallery_system" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -205,12 +245,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565953189904</updated>
-      <workItem from="1565953190996" duration="75374000" />
+      <workItem from="1565953190996" duration="78362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75374000" />
+    <option name="totallyTimeSpent" value="78362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
@@ -376,25 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="n#query#0;n#DB_object#0;n#!!top" />
-            <element signature="n#instantanion#0;n#DB_object#0;n#!!top" />
-            <element signature="n#get_all#0;n#DB_object#0;n#!!top" />
-            <element signature="n#clean_properties#0;n#DB_object#0;n#!!top" />
-            <element signature="n#has_the_key#0;n#DB_object#0;n#!!top" />
-            <element signature="n#get_properties#0;n#DB_object#0;n#!!top" />
-            <element signature="n#save#0;n#DB_object#0;n#!!top" />
-            <element signature="n#create#0;n#DB_object#0;n#!!top" />
-            <element signature="n#update#0;n#DB_object#0;n#!!top" />
-            <element signature="n#delete#0;n#DB_object#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -406,13 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/photos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="44" column="19" lean-forward="true" selection-end-line="95" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -437,27 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/add_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/delete_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -465,23 +458,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
+    <entry file="file://$PROJECT_DIR$/admin/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="128" selection-end-column="5" />
+        <state relative-caret-position="425">
+          <caret line="20" column="41" selection-end-line="114" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/photos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit_photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding>
-            <element signature="n#set_file#0;n#Photo#0;n#!!top" />
-            <element signature="n#save#0;n#Photo#0;n#!!top" />
+            <element signature="n#query#0;n#DB_object#0;n#!!top" />
+            <element signature="n#instantanion#0;n#DB_object#0;n#!!top" />
+            <element signature="n#get_all#0;n#DB_object#0;n#!!top" />
+            <element signature="n#clean_properties#0;n#DB_object#0;n#!!top" />
+            <element signature="n#has_the_key#0;n#DB_object#0;n#!!top" />
+            <element signature="n#get_properties#0;n#DB_object#0;n#!!top" />
+            <element signature="n#save#0;n#DB_object#0;n#!!top" />
+            <element signature="n#create#0;n#DB_object#0;n#!!top" />
+            <element signature="n#update#0;n#DB_object#0;n#!!top" />
+            <element signature="n#delete#0;n#DB_object#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="106" column="131" selection-start-line="106" selection-start-column="93" selection-end-line="106" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="66" column="104" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="98" column="38" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="38" />
+        <state relative-caret-position="275">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
+            <element signature="n#verify_user#0;n#User#0;n#!!top" />
             <element signature="n#get_image_path#0;n#User#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="n#set_file#0;n#Photo#0;n#!!top" />
+            <element signature="n#save#0;n#Photo#0;n#!!top" />
+            <element signature="n#delete_photo#0;n#Photo#0;n#!!top" />
           </folding>
         </state>
       </provider>

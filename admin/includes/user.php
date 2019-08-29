@@ -16,6 +16,8 @@
         public $user_image = null;
         public $upload_dir = "images";
         public $image_placeholder = "https://via.placeholder.com/400&text=image";
+        public $tmp_path = null;
+
 
 
         //static methods
