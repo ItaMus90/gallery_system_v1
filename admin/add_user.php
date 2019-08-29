@@ -9,12 +9,18 @@
 
         $user = new User();
 
-        $user->username = $_POST["username"];
-        $user->first_name = $_POST["first_name"];
-        $user->last_name = $_POST["last_name"];
-        $user->password = $_POST["password"];
+        if ($user){
 
-        $user->save();
+            $user->username = $_POST["username"];
+            $user->first_name = $_POST["first_name"];
+            $user->last_name = $_POST["last_name"];
+            $user->password = $_POST["password"];
+
+            $user->set_file($_FILES["user_image"]);
+
+            $user->save_user_and_image();
+
+        }
 
     }
 
@@ -49,6 +55,13 @@
 
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="col-md-6 col-md-offset-3">
+
+
+                            <div class="form-group">
+
+                                <input type="file" name="user_image">
+
+                            </div>
 
                             <div class="form-group">
                                 <label for="username">Username</label>

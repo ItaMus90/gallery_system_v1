@@ -36,8 +36,94 @@
         }
 
 
+        //This is passing $_FILE['uploaded_file'] as an argument
+        public function set_file($file){
 
-        function get_image_path(){
+            if (empty($file) || !$file || !is_array($file)){
+
+                $this->errors_arr[] = "There was no file uploaded here";
+
+                return false;
+
+            }
+
+            if ($file["error"] !== 0){
+
+                $this->errors_arr[] = $this->upload_errors_arr[$file["error"]];
+
+                return false;
+
+            }
+
+            $this->user_image = basename($file["name"]);
+            $this->type     = $file["type"];
+            $this->tmp_path = $file["tmp_name"];
+            $this->size     = $file["size"];
+
+        }
+
+        public function save_user_and_image(){
+
+            if ($this->id){
+
+                $this->update();
+
+            } else{
+
+                if (!empty($this->errors_arr)){
+
+                    return false;
+
+                }
+
+                if (!isset($this->user_image) || !isset($this->tmp_path)){
+
+                    $this->errors_arr[] = "The file was not available";
+
+                    return false;
+
+                }
+
+                $target_path = SITE_ROOT . DS . "admin" . DS . $this->upload_dir;
+                $target_path .= DS . $this->user_image;
+
+
+                if (file_exists($target_path)){
+
+                    $this->errors_arr[] = "The File " . $this->user_image . " already exists";
+
+                    return false;
+
+                }
+
+                if (move_uploaded_file($this->tmp_path, $target_path)){
+
+                    if ($this->create()){
+
+                        unset($this->tmp_path);
+
+                        return true;
+
+                    }
+
+                }else {
+
+                    $this->errors_arr[] = "The file directory probably does not have permission";
+
+                    return false;
+
+                }
+
+
+                return false;
+
+            }
+
+
+
+        }
+
+        public function get_image_path(){
 
             $img_path = "";
 
