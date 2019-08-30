@@ -78,9 +78,9 @@
 
                 }
 
+
                 if (!isset($this->user_image) || !isset($this->tmp_path)){
 
-                    $this->errors_arr[] = "The file was not available";
 
                     return false;
 
@@ -90,15 +90,8 @@
                 $target_path .= DS . $this->user_image;
 
 
-                if (file_exists($target_path)){
-
-                    $this->errors_arr[] = "The File " . $this->user_image . " already exists";
-
-                    return false;
-
-                }
-
                 if (move_uploaded_file($this->tmp_path, $target_path)){
+
 
                     if ($this->create()){
 
