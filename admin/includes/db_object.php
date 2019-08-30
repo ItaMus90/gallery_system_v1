@@ -122,6 +122,14 @@ class DB_object {
 
     }
 
+    protected function get_current_datetime($format = "Y-m-d H:i:s"){
+
+        $date = new DateTime();
+
+        return  $date->format($format);
+
+    }
+
     public function save(){
 
         return isset($this->id) ? $this->update() : $this->create();
