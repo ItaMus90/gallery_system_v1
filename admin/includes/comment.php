@@ -5,15 +5,15 @@ class Comment extends DB_object{
 
 
     //static properties
-    protected static $db_table = "comment";
+    protected static $db_table = "comments";
     protected static $db_table_fields = array('photo_id', 'author', 'body', 'date');
 
     //regular properties
-    protected $id = null;
-    protected $photo_id= null;
-    protected $author = null;
-    protected $body = null;
-    protected $date = null;
+    public $id = null;
+    public $photo_id= null;
+    public $author = null;
+    public $body = null;
+    public $date = null;
 
 
     //static methods

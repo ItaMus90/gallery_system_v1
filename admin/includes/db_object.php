@@ -140,6 +140,7 @@ class DB_object {
 
         global $db;
 
+
         $properties = $this->clean_properties();
 
         $sql = "INSERT INTO " .static::$db_table. " (". implode(',', array_keys($properties)) .")";
