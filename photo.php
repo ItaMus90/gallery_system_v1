@@ -2,7 +2,9 @@
 
     require_once "admin/includes/init.php";
 
-
+    $msg = null;
+    $author = null;
+    $body = null;
 
     if (empty($_GET["id"]) || !isset($_GET["id"])){
 
@@ -16,9 +18,26 @@
 
     if (isset($_POST["submit"])){
 
+        $author = trim($_POST["author"]);
+        $body = trim($_POST["body"]);
 
+        $comment = Comment::create_comment($photo->id, $author, $body);
+
+        if (key($comment) && $comment->save()){
+
+            redirect("photo.php?id=" . $photo->id);
+
+        } else {
+
+            $msg = "Error save comment";
+
+        }
 
     }
+
+    $comments = Comment::find_comments($photo->id);
+
+    print_r($comment);
 
 ?>
 

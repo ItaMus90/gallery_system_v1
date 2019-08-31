@@ -17,7 +17,7 @@ class Comment extends DB_object{
 
 
     //static methods
-    public function create_comment($photo_id = null, $author = "John", $body = ""){
+    public static function create_comment($photo_id = null, $author = "John", $body = ""){
 
         if ($photo_id !== null || !empty($photo_id)){
 
@@ -26,7 +26,7 @@ class Comment extends DB_object{
             $comment->photo_id = (int)$photo_id;
             $comment->author = $author;
             $comment->body = $body;
-            $comment->date = $this->get_current_datetime();
+            $comment->date = self::get_current_datetime();
 
             return $comment;
 
@@ -37,7 +37,7 @@ class Comment extends DB_object{
     }
 
 
-    public function find_comments($photo_id = null){
+    public static function find_comments($photo_id = null){
 
         if ($photo_id !== null || !empty($photo_id)){
 
