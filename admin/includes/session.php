@@ -6,11 +6,14 @@
 
         protected $signed_in = false;
         protected $msg = "";
-        public $usre_id = null;
+        public $user_id = null;
+        public $visitors_length = null;
+
 
         public function __construct(){
 
             session_start();
+            $this->visitor_count();
             $this->check_the_login();
             $this->check_message();
 
@@ -40,7 +43,7 @@
 
             if ($user){
 
-                $this->usre_id = $_SESSION["user_id"] = $user->id;
+                $this->user_id = $_SESSION["user_id"] = $user->id;
                 $this->signed_in = true;
 
 
@@ -51,21 +54,35 @@
         public function logout(){
 
             unset($_SESSION["user_id"]);
-            unset($this->usre_id);
+            unset($this->user_id);
             $this->signed_in = false;
         }
 
+
+        private function visitor_count() {
+
+            if (isset($_SESSION["visitors_length"])){
+
+                return $this->visitors_length =  $_SESSION["visitors_length"]++;
+
+            }else {
+
+                $_SESSION["visitors_length"] = 1;
+
+            }
+
+        }
 
         private function check_the_login(){
 
             if (isset($_SESSION["user_id"])){
 
-                $this->usre_id = $_SESSION["user_id"];
+                $this->user_id = $_SESSION["user_id"];
                 $this->signed_in = true;
 
             }else{
 
-                unset($this->usre_id);
+                unset($this->user_id);
                 $this->signed_in = false;
 
             }
