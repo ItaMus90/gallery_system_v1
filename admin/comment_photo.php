@@ -4,11 +4,13 @@
 
 <?php
 
-    if (!isset($_GET["id"]) || !empty($_GET["id"])){
+    if (!isset($_GET["id"]) || empty($_GET["id"])){
 
         redirect("photos.php");
 
     }
+
+    $comments = Comment::find_comments($_GET["id"]);
 
 ?>
 

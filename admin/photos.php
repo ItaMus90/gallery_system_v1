@@ -46,6 +46,7 @@
                                     <th>File Name</th>
                                     <th>Title</th>
                                     <th>Size</th>
+                                    <th>Comments</th>
                                 </tr>
 
                             </thead>
@@ -74,6 +75,9 @@
                                     </td>
                                     <td>
                                         <?php echo $photo->size; ?>
+                                    </td>
+                                    <td>
+                                        <a href="comment_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-link">All Comments</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
