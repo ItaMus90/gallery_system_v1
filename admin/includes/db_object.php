@@ -35,6 +35,26 @@ class DB_object {
 
     }
 
+    public static function count_all() {
+
+        global $db;
+
+        $sql = "SELECT COUNT(*) FROM " . static::$db_table;
+
+        $result = $db->query($sql);
+
+        if (!key($result)){
+
+            return false;
+
+        }
+
+        $result = mysqli_fetch_array($result);
+
+        return array_shift($result);
+
+    }
+
     public static function instantanion($class_ob){
 
         $calling_class = get_called_class();
