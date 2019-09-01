@@ -1,12 +1,16 @@
 <?php include("includes/header.php"); ?>
 
-    <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
+<?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 
-    <?php
+<?php
 
-        $photos = Photo::get_all();
+    if (!isset($_GET["id"]) || !empty($_GET["id"])){
 
-    ?>
+        redirect("photos.php");
+
+    }
+
+?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -30,8 +34,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        PHOTOS
-                        <small>Subheading</small>
+                        COMMENTS
                     </h1>
 
                     <div class="col-md-12">
@@ -40,40 +43,33 @@
 
                             <thead>
 
-                                <tr>
-                                    <th>Photo</th>
-                                    <th>ID</th>
-                                    <th>File Name</th>
-                                    <th>Title</th>
-                                    <th>Size</th>
-                                </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Author</th>
+                                <th>Body</th>
+                                <th>Date</th>
+                            </tr>
 
                             </thead>
                             <tbody>
-                            <?php foreach ($photos as $photo) : ?>
+                            <?php foreach ($comments as $comment) : ?>
                                 <tr>
                                     <td>
-                                        <img class="admin-photo-thumbnail" src="<?php echo $photo->get_images_path(); ?>" alt="">
-
+                                        <?php echo $comment->id; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $comment->author; ?>
                                         <div class="action_links">
 
-                                            <a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
-                                            <a href="edit_photo.php?id=<?php echo $photo->id; ?>">Edit</a>
-                                            <a href="../photo.php?id=<?php echo $photo->id; ?>">View</a>
+                                            <a href="delete_comment.php?id=<?php echo $comment->id; ?>">Delete</a>
 
                                         </div>
                                     </td>
                                     <td>
-                                        <?php echo $photo->id; ?>
+                                        <?php echo $comment->body; ?>
                                     </td>
                                     <td>
-                                        <?php echo $photo->filename; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $photo->title; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $photo->size; ?>
+                                        <?php echo $comment->date; ?>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
