@@ -1,3 +1,20 @@
+<?php
+
+    $arr = array(
+
+        "views"     => $session->visitors_length,
+        "photos"    =>  Photo::count_all(),
+        "users"     =>  User::count_all(),
+        "comments"  =>  Comment::count_all()
+
+    );
+
+    $json_obj = json_encode($arr);
+
+?>
+
+<input type="hidden" id="json_data" value='<?php echo $json_obj; ?>'>
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -5,7 +22,7 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 ADMIN
-                <small>Subheading</small>
+                <small>Dashboard</small>
             </h1>
 
 
@@ -124,3 +141,4 @@
 
 </div>
 <!-- /.container-fluid -->
+
