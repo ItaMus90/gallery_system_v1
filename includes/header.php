@@ -1,10 +1,5 @@
 <?php include "admin/includes/init.php" ?>
 
-<?php
-
-    $photos = Photo::get_all();
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
