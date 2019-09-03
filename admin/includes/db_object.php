@@ -19,7 +19,7 @@ class DB_object {
     );
 
     //static methods
-    protected static function query($sql){
+    public static function query($sql){
 
         global $db;
         $result = $db->query($sql);
