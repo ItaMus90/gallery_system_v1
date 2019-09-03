@@ -38,7 +38,7 @@
 
 ?>
 
-<?php include "modal.php"; ?>
+<?php include "includes/modal.php"; ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
