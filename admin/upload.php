@@ -48,8 +48,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        UPLOAD
-                        <small>Subheading</small>
+                        UPLOAD PHOTO
                     </h1>
 
                     <?php echo $msg; ?>
