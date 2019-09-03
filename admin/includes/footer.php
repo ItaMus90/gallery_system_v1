@@ -9,8 +9,8 @@
 
     <!--WYSIWYG -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="js/app_chart.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app_chart.js?<?php echo time(); ?>"></script>
+    <script src="js/app.js?<?php echo time(); ?>"></script>
 
   </body>
 

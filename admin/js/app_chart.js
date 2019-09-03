@@ -4,21 +4,23 @@ var App_chart = (function (){
 
     function _setDataChart() {
 
-        var json_obj = document.getElementById("json_data").value;
+        var json_obj = document.getElementById("json_data");
+
+        if (json_obj){
+
+            json_obj = json_obj.value;
+
+        } else {
+
+            return false;
+
+        }
 
         json_obj = JSON.parse(json_obj);
 
         if (_isObject(json_obj)){
 
-            _data = [
-                ['Task', 'Hours per Day'],
-                ['Views',     json_obj.views],
-                ['Photos',      json_obj.photos],
-                ['Users',  json_obj.users],
-                ['Comments', json_obj.comments]
-            ];
-
-            console.log(_data);
+            _data = json_obj;
 
         } else {
 
@@ -36,11 +38,10 @@ var App_chart = (function (){
 
     function _drawChart() {
 
-        var json_obj = document.getElementById("json_data").value;
 
-        json_obj = JSON.parse(json_obj);
+        var json_obj = _data;
 
-        if (!_data || _data === null)
+        if (!json_obj || json_obj === null)
             return false;
 
         var data = google.visualization.arrayToDataTable([

@@ -38,6 +38,8 @@
 
 ?>
 
+<?php include "modal.php"; ?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,9 +66,9 @@
                     </h1>
                     
                     <div class="col-md-6">
-
-                        <img class="img-responsive" src="<?php echo $user->get_image_path(); ?>" alt="">
-                        
+                        <a href="" data-toggle="modal" data-target="#photo_modal">
+                            <img class="img-responsive" src="<?php echo $user->get_image_path(); ?>" alt="">
+                        </a>
                     </div>
 
                     <form action="" method="post" enctype="multipart/form-data">
@@ -75,7 +77,7 @@
 
                             <div class="form-group">
 
-                                <input type="file" name="user_image">
+                                    <input type="file" name="user_image">
 
                             </div>
 
