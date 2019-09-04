@@ -9,6 +9,7 @@ $(document).ready(function(){
     var photo_src = null;
     var photo_src_splitted = null;
     var photo_name = null;
+    var photo_id = null;
 
     $(".modal_thumbnails").click(function(){
 
@@ -27,6 +28,28 @@ $(document).ready(function(){
 
         photo_name = photo_src_splitted[photo_src_splitted.length - 1];
 
+        photo_id = $(this).attr("data");
+
+
+        $.ajax({
+
+            url: "includes/ajax_code.php",
+            data: {
+                photo_id: photo_id
+            },
+            type: "POST",
+            success: function(data){
+
+                if (!data.error){
+
+                    $("#modal_sidebar").html(data);
+
+                }
+
+            }
+
+
+        });
 
     });
 

@@ -21,7 +21,29 @@ class Photo extends DB_object{
     public $tmp_path = null;
     public $upload_dir = "images";
 
+    //Static methods
+    public static function display_sidebar_data($photo_id = null){
 
+        if ($photo_id === null)
+            return false;
+
+        $photo = Photo::get_by_id($photo_id);
+
+        if (!key($photo))
+            return false;
+
+
+        $output  = "<a class='thumbnail' href=''><img width='100' src='".$photo->get_images_path()."' alt=''></a>";
+        $output .= "<p>".$photo->filename."</p>";
+        $output .= "<p>".$photo->type."</p>";
+        $output .= "<p>".$photo->size."</p>";
+
+
+        echo $output;
+
+    }
+
+    //Regular methods
     //This is passing $_FILE['uploaded_file'] as an argument
     public function set_file($file){
 
@@ -130,7 +152,6 @@ class Photo extends DB_object{
         }
 
     }
-
 
 
 }
