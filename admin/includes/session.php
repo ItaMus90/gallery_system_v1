@@ -5,10 +5,9 @@
     class Session{
 
         protected $signed_in = false;
-        protected $msg = "";
         public $user_id = null;
         public $visitors_length = null;
-
+        public $msg = "";
 
         public function __construct(){
 

@@ -18,6 +18,7 @@
 
         $user->delete();
         redirect("users.php");
+        $session->message("User " . $user->username ." has been delete");
 
     }else{
 

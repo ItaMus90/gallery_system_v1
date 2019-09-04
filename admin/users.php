@@ -29,10 +29,13 @@ $users = User::get_all();
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
+
                     <h1 class="page-header">
                         USERS
                     </h1>
-
+                    <p class="bg-success">
+                        <?php echo $session->msg; ?>
+                    </p>
                     <a href="add_user.php" class="btn btn-primary">Add New User</a>
 
                     <div class="col-md-12">

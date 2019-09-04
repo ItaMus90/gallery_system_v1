@@ -27,6 +27,9 @@
 
                 $user->save_user_and_image();
 
+                redirect("users.php");
+                $session->message("User has been update");
+
             }
 
         }
