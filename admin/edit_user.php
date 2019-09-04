@@ -65,7 +65,7 @@
                         Add New User
                     </h1>
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 user_image_box">
                         <a href="" data-toggle="modal" data-target="#photo_modal">
                             <img class="img-responsive" src="<?php echo $user->get_image_path(); ?>" alt="">
                         </a>

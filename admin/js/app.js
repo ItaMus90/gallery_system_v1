@@ -46,7 +46,9 @@ $(document).ready(function(){
 
                 if (!data.error){
 
-                    location.reload(true);
+                    console.log(data);
+
+                    $(".user_image_box a img").prop("src", data);
 
                 }
 

@@ -139,16 +139,24 @@
 
         public function update_user_image($user_id = null, $user_image = null){
 
+            global $db;
+
             if ($user_id === null || $user_image === null){
 
                 return false;
 
             }
 
-            $this->user_image = $user_image;
-            $this->id = $user_id;
+            $this->user_image = $db->escape_string($user_image);
+            $this->id = $db->escape_string($user_id);
 
-            $this->save();
+
+            $sql  = "UPDATE " . self::$db_table . " SET user_image='".$this->user_image."' ";
+            $sql .= "WHERE id='". $this->id ."'";
+
+            $update_image = $db->query($sql);
+
+            echo $this->get_image_path();
 
 
         }
