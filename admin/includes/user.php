@@ -3,11 +3,11 @@
 
     class User extends DB_object {
 
-        //static properties
+        //Static properties
         protected static $db_table = "users";
         protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name', 'user_image');
 
-        //regular properties
+        //Regular properties
         public $id = null;
         public $username = null;
         public $password = null;
@@ -20,7 +20,7 @@
 
 
 
-        //static methods
+        //Static methods
         public static function verify_user($username, $password){
 
             global $db;
@@ -38,6 +38,7 @@
         }
 
 
+        //Regular methods
         //This is passing $_FILE['uploaded_file'] as an argument
         public function set_file($file){
 
@@ -136,7 +137,21 @@
 
         }
 
+        public function update_user_image($user_id = null, $user_image = null){
 
+            if ($user_id === null || $user_image === null){
+
+                return false;
+
+            }
+
+            $this->user_image = $user_image;
+            $this->id = $user_id;
+
+            $this->save();
+
+
+        }
 
 
 

@@ -46,7 +46,7 @@ $(document).ready(function(){
 
                 if (!data.error){
 
-                    console.log(data);
+                    location.reload(true);
 
                 }
 
