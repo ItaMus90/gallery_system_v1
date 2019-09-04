@@ -8,7 +8,7 @@ $(document).ready(function(){
     //Photo
     var photo_src = null;
     var photo_src_splitted = null;
-    var photo_id = null;
+    var photo_name = null;
 
     $(".modal_thumbnails").click(function(){
 
@@ -25,14 +25,36 @@ $(document).ready(function(){
 
         photo_src_splitted = photo_src.split("/");
 
-        photo_id = photo_src_splitted[photo_src_splitted.length - 1];
-
-        console.log(photo_id);
+        photo_name = photo_src_splitted[photo_src_splitted.length - 1];
 
 
     });
 
 
+    $("#set_user_image").click(function(){
+
+
+        $.ajax({
+
+            url: "includes/ajax_code.php",
+            data: {
+                photo_name: photo_name,
+                user_id: user_id
+            },
+            type: "POST",
+            success: function(data) {
+
+                if (!data.error){
+
+                    console.log(data);
+
+                }
+
+            }
+
+        });
+
+    });
 
 
     tinymce.init({selector:'textarea'});
